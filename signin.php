@@ -63,9 +63,9 @@
 						<ul>
 							<li><a href="index.html">Home</a></li>
 							<li><a href="work.html">All Posts</a></li>
-							<li><a href="">Write</a></li>
+							<li><a href="notice_write.php">Write</a></li>
 							<li><a href="notice_list.php">Notice</a></li>
-							<li class="active"><a href="contact.html">My Page</a></li>
+							<li class="active"><a href="login.php">Login</a></li>
 						</ul>
 					</div>
 				</div>
@@ -73,43 +73,34 @@
 			</div>
 		</div>
 	</nav>
-	<form action="../DailyPost/procs/signup_proc.php" method="post">
-	<div class="container-wrap">	
-		<div id="fh5co-contact">
-			<div class="row animate-box">
+	<form action="../DailyPost/procs/signin_proc.php" method="post">
+	<div class="container-wrap" style="display:flex; justify-content:center; align-items:center;">	
+	<div id="fh5co-contact" style="text-align:center;">
+		<div class="row animate-box">
 				<div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
-					<h2>SIGN UP</h2>
+					<h2>SIGN IN</h2>
 				</div>
 			</div>
-			<div class="col-md-6">
-				<div class="form-group">
-					<input type="text" name="name" class="form-control" placeholder="Name">
-				</div>
+		<div class="col-md-6" style="width:100%; margin-bottom:15px;">
+			<div class="form-group" style="width:100%;">
+				<input type="email" name="email" class="form-control" placeholder="Email" style="width:100%; padding:10px;">
 			</div>
-			<div class="col-md-6">
-				<div class="form-group">
-					<input type="email" name="email" class="form-control" placeholder="Email">
-				</div>
+		</div>
+		<div class="col-md-6" style="width:100%; margin-bottom:15px;">
+			<div class="form-group" style="width:100%;">
+				<input type="password" name="password" class="form-control" placeholder="Password" style="width:100%; padding:10px;">
 			</div>
-			<div class="col-md-6">
-				<div class="form-group">
-					<input type="password" name="password" class="form-control" placeholder="Password">
-				</div>
-			</div>
-			<div class="col-md-6">
-				<div class="form-group">
-					<input type="password" name="password_confirm" class="form-control" placeholder="Confirm Password">
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-8 col-md-offset-2 animate-box">
-					<div class="form-group text-center">
-					<input type="submit" value="Sign Up" class="btn btn-primary btn-modify">
-					</div>
+		</div>
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2 animate-box">
+				<div class="form-group text-center">
+					<input type="submit" value="LOGIN" class="btn btn-primary btn-modify">
 				</div>
 			</div>
 		</div>
 	</div>
+</div>
+
 	</form>
 
 	</div>

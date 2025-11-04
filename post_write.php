@@ -1,3 +1,15 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['is_login']) || $_SESSION['is_login'] !== true) {
+    echo "<script>alert('로그인 후 이용할 수 있습니다.'); location.href='signin.php';</script>";
+    exit;
+}
+
+$user_name = $_SESSION['user_name'];
+// $user_id = $_SESSION['user_id'];
+$current_date = date('Y-m-d');
+?>
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -77,111 +89,54 @@
 						</ul>
 					</div>
 				</div>
-				
 			</div>
 		</div>
 	</nav>
-	<div class="container-wrap">	
-		<div id="fh5co-contact">
-			<div class="row animate-box">
-				<div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
-					<h2>Notice</h2>
+	<form action="../DailyPost/procs/post_write_proc.php" method="post">
+		<!-- <input type="hidden" name="user_id" value="<?= $_SESSION['user_id'] ?>"> -->
+		<div class="container-wrap">	
+			<div id="fh5co-contact">
+				<div class="row animate-box">
+					<div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
+						<h2>Post</h2>
+					</div>
 				</div>
-			</div>
-				<div class="col-md-6 animate-box">
-					<div class="row">
-						<div class="col-md-6">
-						<ul class="contact-info">
-							<li><i class="icon-profile" ></i> Name</li>
-						</ul>
+					<div class="col-md-6 animate-box">
+						<div class="row">
+							<div class="col-md-6">
+							<ul class="contact-info">
+								<li><i class="icon-profile"></i><?= htmlspecialchars($user_name) ?></li>
+							</ul>
+							</div>
+							<div class="col-md-6">
+							<ul class="contact-info">
+								<li><i class="icon-calendar3"></i><?= $current_date ?></li>
+							</ul>
+							</div>
 						</div>
-						<div class="col-md-6">
-						<ul class="contact-info">
-							<li><i class="icon-calendar3"></i> 2025-11-02</li>
-						</ul>
+						</div>
+
+				<div class="col-md-12">
+					<div class="form-group">
+						<input type="text" name="title" class="form-control" placeholder="Title">
+					</div>
+				</div>
+				<div class="col-md-12">
+					<div class="form-group">
+						<textarea name="content" class="form-control" id="" cols="30" rows="7" placeholder="Content"></textarea>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 animate-box">
+						<div class="form-group text-center">
+						<input type="submit" value="Send Message" class="btn btn-primary btn-modify">
 						</div>
 					</div>
-					</div>
-
-			<div class="col-md-12">
-				<div class="form-group">
-					<input type="text" class="form-control" placeholder="Title">
 				</div>
 			</div>
-			<div class="col-md-12">
-				<div class="form-group">
-					<textarea name="" class="form-control" id="" cols="30" rows="7" placeholder="Content"></textarea>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-8 col-md-offset-2 animate-box">
-					<div class="form-group text-center">
-					<input type="submit" value="Send Message" class="btn btn-primary btn-modify">
-					</div>
-				</div>
-			</div>
-		</div>
-	</div><!-- END container-wrap -->
+		</div><!-- END container-wrap -->
+	</form>
 
-	<div class="container-wrap">
-		<footer id="fh5co-footer" role="contentinfo">
-			<div class="row">
-				<div class="col-md-3 fh5co-widget">
-					<h4>About Neat</h4>
-					<p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Eos cumque dicta adipisci architecto culpa amet.</p>
-				</div>
-				<div class="col-md-3 col-md-push-1">
-					<h4>Latest Posts</h4>
-					<ul class="fh5co-footer-links">
-						<li><a href="#">Amazing Templates</a></li>
-						<li><a href="#">100+ Free Download Templates</a></li>
-						<li><a href="#">Neat is now available</a></li>
-						<li><a href="#">Download 1000+ icons</a></li>
-						<li><a href="#">Big Deal for this month of March, Join Us here</a></li>
-					</ul>
-				</div>
-
-				<div class="col-md-3 col-md-push-1">
-					<h4>Links</h4>
-					<ul class="fh5co-footer-links">
-						<li><a href="#">Home</a></li>
-						<li><a href="#">Work</a></li>
-						<li><a href="#">Services</a></li>
-						<li><a href="#">Blog</a></li>
-						<li><a href="#">About us</a></li>
-					</ul>
-				</div>
-				<div class="col-md-3">
-					<h4>Contact Information</h4>
-					<ul class="fh5co-footer-links">
-						<li>198 West 21th Street, <br> Suite 721 New York NY 10016</li>
-						<li><a href="tel://1234567920">+ 1235 2355 98</a></li>
-						<li><a href="mailto:info@yoursite.com">info@yoursite.com</a></li>
-						<li><a href="http://gettemplates.co">gettemplates.co</a></li>
-					</ul>
-				</div>
-
-			</div>
-
-			<div class="row copyright">
-				<div class="col-md-12 text-center">
-					<p>
-						<small class="block">&copy; 2016 Free HTML5. All Rights Reserved.</small> 
-						<small class="block">Designed by <a href="http://freehtml5.co/" target="_blank">FreeHTML5.co</a> Demo Images: <a href="http://unsplash.co/" target="_blank">Unsplash</a></small>
-					</p>
-					<p>
-						<ul class="fh5co-social-icons">
-							<li><a href="#"><i class="icon-twitter"></i></a></li>
-							<li><a href="#"><i class="icon-facebook"></i></a></li>
-							<li><a href="#"><i class="icon-linkedin"></i></a></li>
-							<li><a href="#"><i class="icon-dribbble"></i></a></li>
-						</ul>
-					</p>
-				</div>
-			</div>
-		</footer>
-	</div><!-- END container-wrap -->
-	</div>
 
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="icon-arrow-up2"></i></a>
