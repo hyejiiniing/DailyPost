@@ -76,7 +76,7 @@
 					<div class="col-xs-10 text-right menu-1">
 						<ul>
 							<li class="active"><a href="index.html">Home</a></li>
-							<li><a href="work.html">Work</a></li>
+							<li><a href="post_write.html">Post</a></li>
 							<li class="has-dropdown">
 								<a href="blog.html">Blog</a>
 								<ul class="dropdown">
@@ -330,12 +330,12 @@
 
 				<div class="col-md-3 col-md-push-1">
 					<h4>Links</h4>
-					<ul class="fh5co-footer-links">
-						<li><a href="#">Home</a></li>
-						<li><a href="#">Work</a></li>
-						<li><a href="#">Services</a></li>
-						<li><a href="#">Blog</a></li>
-						<li><a href="#">About us</a></li>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="work.html">All Posts</a></li>
+						<li><a href="">Write</a></li>
+						<li><a href="notice_list.php">Notice</a></li>
+						<li class="active"><a href="contact.html">My Page</a></li>
 					</ul>
 				</div>
 

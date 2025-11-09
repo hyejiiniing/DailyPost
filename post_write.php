@@ -93,7 +93,7 @@ $current_date = date('Y-m-d');
 		</div>
 	</nav>
 	<form action="../DailyPost/procs/post_write_proc.php" method="post">
-		<!-- <input type="hidden" name="user_id" value="<?= $_SESSION['user_id'] ?>"> -->
+		<input type="hidden" name="user_id" value="<?= $_SESSION['user_id'] ?>">
 		<div class="container-wrap">	
 			<div id="fh5co-contact">
 				<div class="row animate-box">
@@ -129,7 +129,7 @@ $current_date = date('Y-m-d');
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2 animate-box">
 						<div class="form-group text-center">
-						<input type="submit" value="Send Message" class="btn btn-primary btn-modify">
+						<input type="submit" value="POST" class="btn btn-primary btn-modify">
 						</div>
 					</div>
 				</div>
