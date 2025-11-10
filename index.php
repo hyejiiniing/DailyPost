@@ -76,7 +76,7 @@
 					<div class="col-xs-10 text-right menu-1">
 						<ul>
 							<li class="active"><a href="index.html">Home</a></li>
-							<li><a href="post_write.html">Post</a></li>
+							<li><a href="post_write.php">Post</a></li>
 							<li class="has-dropdown">
 								<a href="blog.html">Blog</a>
 								<ul class="dropdown">

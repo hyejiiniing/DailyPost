@@ -7,6 +7,7 @@ class BoardClass {
     $this->conn = $conn;
   }
 
+  /** 게시글 등록 */
   public function create($notice_type, $user_id, $title, $content) {
     $sql = "INSERT INTO {$this->table_name} (notice_type, user_id, title, content, created_at)
             VALUES (?, ?, ?, ?, NOW())";
@@ -14,10 +15,12 @@ class BoardClass {
     if (!$stmt) {
       die("SQL prepare 실패: " . $this->conn->error);
     }
+    // notice_type: s, user_id: i, title: s, content: s
     $stmt->bind_param("siss", $notice_type, $user_id, $title, $content);
     return $stmt->execute();
   }
 
+  /** 게시글 목록 조회 */
   public function getList() {
     $sql = "SELECT b.id, b.notice_type, b.user_id, u.name AS user_name, b.title, b.created_at
             FROM {$this->table_name} b
@@ -34,6 +37,7 @@ class BoardClass {
     return $data;
   }
 
+  /** 단일 게시글 조회 */
   public function getView($id) {
     $sql = "SELECT b.*, u.name AS user_name
             FROM {$this->table_name} b
@@ -49,6 +53,7 @@ class BoardClass {
     return $result->fetch_assoc();
   }
 
+  /** 게시글 삭제 */
   public function delete($id, $user_id) {
     $sql = "DELETE FROM {$this->table_name} WHERE id = ? AND user_id = ?";
     $stmt = $this->conn->prepare($sql);

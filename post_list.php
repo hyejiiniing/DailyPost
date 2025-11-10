@@ -63,9 +63,9 @@
 						<ul>
 							<li><a href="index.html">Home</a></li>
 							<li><a href="work.html">All Posts</a></li>
-							<li><a href="notice_write.php">Write</a></li>
+							<li><a href="">Write</a></li>
 							<li><a href="notice_list.php">Notice</a></li>
-							<li class="active"><a href="login.php">Login</a></li>
+							<li class="active"><a href="contact.html">My Page</a></li>
 						</ul>
 					</div>
 				</div>
@@ -73,35 +73,33 @@
 			</div>
 		</div>
 	</nav>
-	<form action="../DailyPost/procs/signin_proc.php" method="post">
-	<div class="container-wrap" style="display:flex; justify-content:center; align-items:center;">	
-	<div id="fh5co-contact" style="text-align:center;">
-		<div class="row animate-box">
-				<div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
-					<h2>SIGN IN</h2>
+
+	<div class="container-wrap">	
+		<div id="fh5co-contact">
+			<div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
+				<h2>Notice</h2>
+			</div>
+			<div class="row">
+		<div class="col-md-12">
+			<div class="col-md-12">
+					<div class="fh5co-blog animate-box">
+						<div class="blog-text">
+							<span class="posted_on">Feb. 15th 2016</span>
+							<h3><a href="#">Photoshoot On The Street</a></h3>
+							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+							<ul class="stuff">
+								<li><i class="icon-heart3"></i>249</li>
+								<li><i class="icon-eye2"></i>1,308</li>
+								<li><a href="#">Read More<i class="icon-arrow-right22"></i></a></li>
+							</ul>
+						</div> 
+					</div>
 				</div>
-			</div>
-		<div class="col-md-6" style="width:100%; margin-bottom:15px;">
-			<div class="form-group" style="width:100%;">
-				<input type="email" name="email" class="form-control" placeholder="Email" style="width:100%; padding:10px;">
-			</div>
-		</div>
-		<div class="col-md-6" style="width:100%; margin-bottom:15px;">
-			<div class="form-group" style="width:100%;">
-				<input type="password" name="password" class="form-control" placeholder="Password" style="width:100%; padding:10px;">
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-8 col-md-offset-2 animate-box">
-				<div class="form-group text-center">
-					<input type="submit" value="SIGN IN" class="btn btn-primary btn-modify">
-				</div>
-			</div>
 		</div>
 	</div>
-</div>
+		</div>
 
-	</form>
+	</div>
 
 	</div>
 

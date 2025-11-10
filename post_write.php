@@ -1,10 +1,10 @@
 <?php
 session_start();
 
-if (!isset($_SESSION['is_login']) || $_SESSION['is_login'] !== true) {
-    echo "<script>alert('로그인 후 이용할 수 있습니다.'); location.href='signin.php';</script>";
-    exit;
-}
+// if (!isset($_SESSION['is_login']) || $_SESSION['is_login'] !== true) {
+//     echo "<script>alert('로그인 후 이용할 수 있습니다.'); location.href='signin.php';</script>";
+//     exit;
+// }
 
 $user_name = $_SESSION['user_name'];
 // $user_id = $_SESSION['user_id'];
@@ -74,18 +74,10 @@ $current_date = date('Y-m-d');
 					<div class="col-xs-10 text-right menu-1">
 						<ul>
 							<li><a href="index.html">Home</a></li>
-							<li><a href="work.html">Work</a></li>
-							<li class="has-dropdown">
-								<a href="blog.html">Blog</a>
-								<ul class="dropdown">
-									<li><a href="#">Web Design</a></li>
-									<li><a href="#">eCommerce</a></li>
-									<li><a href="#">Branding</a></li>
-									<li><a href="#">API</a></li>
-								</ul>
-							</li>
-							<li><a href="about.html">About</a></li>
-							<li class="active"><a href="contact.html">Contact</a></li>
+							<li><a href="work.html">All Posts</a></li>
+							<li><a href="notice_write.php">Write</a></li>
+							<li><a href="notice_list.php">Notice</a></li>
+							<li class="active"><a href="login.php">Login</a></li>
 						</ul>
 					</div>
 				</div>
