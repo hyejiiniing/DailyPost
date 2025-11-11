@@ -1,0 +1,13 @@
+# macOS
+.DS_Store
+
+# XAMPP cache
+tmp/
+logs/
+
+# PHPStorm, VSCode, etc.
+.idea/
+.vscode/
+
+# System
+Thumbs.db
