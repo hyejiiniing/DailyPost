@@ -73,18 +73,18 @@ $current_date = date('Y-m-d');
 					</div>
 					<div class="col-xs-10 text-right menu-1">
 						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li><a href="work.html">All Posts</a></li>
-							<li><a href="notice_write.php">Write</a></li>
+							<li><a href="index.php">Home</a></li>
+							<li class="active"><a href="feed.php">Feed</a></li>
 							<li><a href="notice_list.php">Notice</a></li>
-							<li class="active"><a href="login.php">Login</a></li>
+							<li><a href="post.php">Post</a></li>
+							<li><a href="mypage.php">My Page</a></li>
 						</ul>
 					</div>
 				</div>
 			</div>
 		</div>
 	</nav>
-	<form action="../DailyPost/procs/post_write_proc.php" method="post">
+	<form action="/DailyPost/procs/post_proc.php" method="post">
 		<input type="hidden" name="user_id" value="<?= $_SESSION['user_id'] ?>">
 		<div class="container-wrap">	
 			<div id="fh5co-contact">

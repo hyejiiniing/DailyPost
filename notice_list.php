@@ -62,7 +62,7 @@
 					<div class="col-xs-10 text-right menu-1">
 						<ul>
 							<li><a href="index.html">Home</a></li>
-							<li><a href="work.html">All Posts</a></li>
+							<li><a href="feed.php">FEED</a></li>
 							<li><a href="">Write</a></li>
 							<li><a href="notice_list.php">Notice</a></li>
 							<li class="active"><a href="contact.html">My Page</a></li>

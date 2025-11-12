@@ -62,7 +62,7 @@
 					<div class="col-xs-10 text-right menu-1">
 						<ul>
 							<li><a href="index.html">Home</a></li>
-							<li><a href="work.html">Work</a></li>
+							<li><a href="feed.php">Work</a></li>
 							<li class="has-dropdown">
 								<a href="blog.html">Blog</a>
 								<ul class="dropdown">

@@ -76,7 +76,7 @@
 					<div class="col-xs-10 text-right menu-1">
 						<ul>
 							<li class="active"><a href="index.html">Home</a></li>
-							<li><a href="post_write.php">Post</a></li>
+							<li><a href="post.php">Post</a></li>
 							<li class="has-dropdown">
 								<a href="blog.html">Blog</a>
 								<ul class="dropdown">
@@ -332,7 +332,7 @@
 					<h4>Links</h4>
 					<ul>
 						<li><a href="index.html">Home</a></li>
-						<li><a href="work.html">All Posts</a></li>
+						<li><a href="feed.php">FEED</a></li>
 						<li><a href="">Write</a></li>
 						<li><a href="notice_list.php">Notice</a></li>
 						<li class="active"><a href="contact.html">My Page</a></li>

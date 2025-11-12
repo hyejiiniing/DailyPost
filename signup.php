@@ -61,11 +61,11 @@
 					</div>
 					<div class="col-xs-10 text-right menu-1">
 						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li><a href="work.html">All Posts</a></li>
-							<li><a href="">Write</a></li>
+							<li><a href="index.php">Home</a></li>
+							<li class="active"><a href="feed.php">Feed</a></li>
 							<li><a href="notice_list.php">Notice</a></li>
-							<li class="active"><a href="contact.html">My Page</a></li>
+							<li><a href="post.php">Post</a></li>
+							<li><a href="mypage.php">My Page</a></li>
 						</ul>
 					</div>
 				</div>

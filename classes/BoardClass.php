@@ -22,20 +22,28 @@ class BoardClass {
 
   /** 게시글 목록 조회 */
   public function getList() {
-    $sql = "SELECT b.id, b.notice_type, b.user_id, u.name AS user_name, b.title, b.created_at
-            FROM {$this->table_name} b
-            LEFT JOIN user u ON b.user_id = u.id
-            ORDER BY b.created_at DESC";
-    $result = $this->conn->query($sql);
+  $sql = "SELECT 
+            b.id, 
+            b.notice_type, 
+            b.user_id, 
+            u.name AS user_name, 
+            b.title, 
+            b.content, 
+            b.created_at
+          FROM {$this->table_name} b
+          LEFT JOIN users u ON b.user_id = u.id
+          ORDER BY b.created_at DESC";
 
-    $data = [];
-    if ($result && $result->num_rows > 0) {
-      while ($row = $result->fetch_assoc()) {
-        $data[] = $row;
-      }
+  $result = $this->conn->query($sql);
+
+  $data = [];
+  if ($result && $result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+      $data[] = $row;
     }
-    return $data;
   }
+  return $data;
+}
 
   /** 단일 게시글 조회 */
   public function getView($id) {
